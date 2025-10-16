@@ -41,7 +41,7 @@ class AboutScreen extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              '• Raniery \n• Gabriel', 
+              '• Raniery Chiarelli Barbosa \n• Gabriel Vaz Guerra', 
               style: TextStyle(fontSize: 16,color: Colors.white),
             ),
           ],
