@@ -36,8 +36,11 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Icon(Icons.pets, size: 80, color: Colors.white70),
-              const SizedBox(height: 48),
+              Image.asset(
+                  'assets/images/Logo.png',
+                  height: 270,
+                  alignment: Alignment(0.2, 0.3), 
+                ),
               TextField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
@@ -63,10 +66,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     _passwordController.text,
                   );
                   if (success && mounted) {
+                    // ignore: use_build_context_synchronously
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(builder: (context) => const MenuScreen()),
                     );
                   } else {
+                    // ignore: use_build_context_synchronously
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('E-mail ou senha inválidos.'),
