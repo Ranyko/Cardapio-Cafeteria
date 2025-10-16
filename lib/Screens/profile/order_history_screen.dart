@@ -8,7 +8,6 @@ class OrderHistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Ouve o provider para pegar a lista de pedidos
     final cartProvider = context.watch<CartProvider>();
     final orders = cartProvider.orders;
 
